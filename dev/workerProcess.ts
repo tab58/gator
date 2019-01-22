@@ -32,10 +32,15 @@ export class WorkerProcess {
   }
 
   kill() {
+    const pid = this._process.pid;
     this._process.stdin.end();
     switch(process.platform) {
       case 'darwin':
-        spawn('kill', ['-9', `${this._process.pid}`]);
+        spawn('kill', ['-9', `${pid}`]);
+        break;
+      case 'win32':
+        // use exec()?
+        spawn('taskkill', [`/PID ${pid} /T /F`]);
         break;
       default:
         throw new Error(`No defined kill() for platform '${process.platform}'.`);
