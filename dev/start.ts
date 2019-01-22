@@ -1,4 +1,4 @@
-import { WorkerProcess } from './dev/workerProcess';
+import { WorkerProcess } from './workerProcess';
 import { watch } from 'chokidar';
 import { connect } from 'ngrok';
 
