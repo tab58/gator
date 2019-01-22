@@ -1,0 +1,30 @@
+{
+  "name": "slack-app-template",
+  "version": "0.0.1",
+  "description": "Template for getting started with a Slack app.",
+  "scripts": {
+    "devstart": "npm run ts-node -- ./dev-start.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ts-node": "./node_modules/.bin/ts-node",
+    "tsc": "./node_modules/.bin/tsc",
+    "build": "npm run tsc -- --build tsconfig.json"
+  },
+  "keywords": [
+    "MIT"
+  ],
+  "author": "Tim Bright",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chokidar": "^1.7.5",
+    "@types/node": "^10.12.18",
+    "ngrok": "^3.1.0",
+    "ts-loader": "^5.3.3",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.2.4",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1"
+  },
+  "dependencies": {
+    "chokidar": "^2.0.4"
+  }
+}
